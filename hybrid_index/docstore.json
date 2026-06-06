@@ -1,0 +1,50 @@
+{
+  "documents": [
+    {
+      "page_content": "Python 是一种简单易学的编程语言，适合初学者入门。",
+      "metadata": {
+        "doc_id": "c29bc2d1",
+        "created_at": "2026-06-05T16:50:00.443092",
+        "content_length": 28,
+        "source": "Python 基础教程"
+      }
+    },
+    {
+      "page_content": "机器学习算法可以分为监督学习和无监督学习两大类。",
+      "metadata": {
+        "doc_id": "e50adbd0",
+        "created_at": "2026-06-05T16:50:00.443128",
+        "content_length": 24,
+        "source": "机器学习入门"
+      }
+    },
+    {
+      "page_content": "深度学习使用多层神经网络来学习数据的特征表示。",
+      "metadata": {
+        "doc_id": "ec64fc07",
+        "created_at": "2026-06-05T16:50:00.443137",
+        "content_length": 23,
+        "source": "深度学习实战"
+      }
+    },
+    {
+      "page_content": "技术面试中常问的数据结构和算法问题包括链表、树、图等。",
+      "metadata": {
+        "doc_id": "93525033",
+        "created_at": "2026-06-05T16:50:00.443143",
+        "content_length": 27,
+        "source": "面试技巧"
+      }
+    },
+    {
+      "page_content": "简历应该突出你的核心竞争力和项目经验。",
+      "metadata": {
+        "doc_id": "c7bfd4d8",
+        "created_at": "2026-06-05T16:50:00.443150",
+        "content_length": 19,
+        "source": "简历编写指南"
+      }
+    }
+  ],
+  "created_at": "2026-06-05T16:50:00.501007"
+}

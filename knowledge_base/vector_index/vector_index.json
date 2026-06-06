@@ -1,0 +1,1327 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_0",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "⼀、类加载过程（类的⽣命周期）  \n⼀个类从被加载到  JVM 开始，到卸载出内存为⽌，其⽣命周期包括  7 个阶段：",
+      "start_index": 0,
+      "end_index": 59,
+      "metadata": {
+        "chunk_index": 0,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_1",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "其中，验证、准备、解析统称为连接（ Linking ） 阶段。\n1.",
+      "start_index": 62,
+      "end_index": 96,
+      "metadata": {
+        "chunk_index": 1,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_2",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 加载（ Loading ）  \n做什么：\n通过类的全限定名获取定义此类的⼆进制字节流（来源可以是  class ⽂件、 jar 包、⽹络、动态代理⽣成\n等）。",
+      "start_index": 96,
+      "end_index": 176,
+      "metadata": {
+        "chunk_index": 2,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_3",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n将字节流的静态存储结构转化为⽅法区的运⾏时数据结构。\n在堆中⽣成⼀个  java.lang.Class 对象，作为⽅法区该类的访问⼊⼝。\n注意：加载阶段尚未完全完成，可能穿插了验证阶段的部分⼯作。",
+      "start_index": 176,
+      "end_index": 275,
+      "metadata": {
+        "chunk_index": 3,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_4",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n2. 验证（ Verification ）  \n⽬的：确保字节流符合  JVM 规范，不危害  JVM 安全。\n四个步骤：\n⽂件格式验证（魔数、版本号等）。",
+      "start_index": 275,
+      "end_index": 354,
+      "metadata": {
+        "chunk_index": 4,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_5",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n元数据验证（类是否有⽗类、是否实现了抽象⽅法等）。\n字节码验证（通过数据流和控制流分析，确保⽅法体在运⾏时不会出现⾮法操作）。\n符号引⽤验证（解析阶段前，",
+      "start_index": 354,
+      "end_index": 432,
+      "metadata": {
+        "chunk_index": 5,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_6",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "检查能否通过符号引⽤找到对应的类、字段、⽅法）。\n3. 准备（ Preparation ）  \n做什么：为类的静态变量（static 字段）分配内存并设置默认零值。",
+      "start_index": 432,
+      "end_index": 514,
+      "metadata": {
+        "chunk_index": 6,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_7",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n注意：此时不包含实例变量（实例变量在对象实例化时分配）。\n特殊情况：如果静态变量被  final 修饰（常量），",
+      "start_index": 514,
+      "end_index": 571,
+      "metadata": {
+        "chunk_index": 7,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_8",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "则准备阶段直接赋值为⽤⼾定义的值（如  static final \nint a = 100; 在准备阶段就赋值为  100 ）。\n4.",
+      "start_index": 571,
+      "end_index": 638,
+      "metadata": {
+        "chunk_index": 8,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_9",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 解析（ Resolution ）  \n做什么：将常量池中的符号引⽤替换为直接引⽤（内存地址或句柄）。\n解析⽬标：类或接⼝、字段、类⽅法、接⼝⽅法、⽅法类型、⽅法句柄、调⽤点限定符。",
+      "start_index": 638,
+      "end_index": 729,
+      "metadata": {
+        "chunk_index": 9,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_10",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n解析时机： JVM 规范允许在类加载的解析阶段进⾏，也允许在⾸次使⽤时才解析（即延迟解析，如  \ninvokestatic 指令第⼀次执⾏时）。多数  JVM 采⽤后者，以提升启动速度。",
+      "start_index": 729,
+      "end_index": 823,
+      "metadata": {
+        "chunk_index": 10,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_11",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n加载  → 验证  → 准备  → 解析  → 初始化  → 使用  → 卸载\n类加载器 加载路径 作⽤\nBootstrap\nClassLoader（启动类\n加载器）\nJAVA_HOME/jre/lib 下核⼼库\n（ rt.",
+      "start_index": 823,
+      "end_index": 936,
+      "metadata": {
+        "chunk_index": 11,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_12",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "jar 、 resources.jar 等）\n加载  Java 核⼼类（如\njava.lang.*），由  C++ 实现， Java\n中获取为  null。",
+      "start_index": 936,
+      "end_index": 1014,
+      "metadata": {
+        "chunk_index": 12,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_13",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\nExtension\nClassLoader（扩展类\n加载器）\nJAVA_HOME/jre/lib/ext 或系统属性\njava.ext.dirs 指定的⽬录\n加载扩展类（如  javax.*），",
+      "start_index": 1014,
+      "end_index": 1112,
+      "metadata": {
+        "chunk_index": 13,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_14",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "⽗加载\n器为  Bootstrap 。",
+      "start_index": 1112,
+      "end_index": 1131,
+      "metadata": {
+        "chunk_index": 14,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_15",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\nApplication\nClassLoader（应⽤类\n加载器）\nclasspath（环境变量  CLASSPATH 或\n-cp 指定）\n加载⽤⼾类路径上的类，⽗加载器为\nExtension 。",
+      "start_index": 1131,
+      "end_index": 1229,
+      "metadata": {
+        "chunk_index": 15,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_16",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n5. 初始化（ Initialization ）  \n做什么：执⾏类构造器  <clinit>() ⽅法。\n<clinit>() 由编译器⾃动收集类中所有静态变量赋值动作和静态代码块合并⽽成。",
+      "start_index": 1229,
+      "end_index": 1326,
+      "metadata": {
+        "chunk_index": 16,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_17",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n⽗类的  <clinit>() 先于⼦类执⾏。\n若类没有静态块或静态变量赋值，编译器可不⽣成  <clinit>()。\n触发初始化的条件（主动引⽤）：\n1.",
+      "start_index": 1326,
+      "end_index": 1405,
+      "metadata": {
+        "chunk_index": 17,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_18",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " new 对象、读写静态变量（⾮  final）、调⽤静态⽅法。\n2. 反射调⽤  Class.forName()（指定  initialize=true）。\n3. 初始化⼦类时，",
+      "start_index": 1405,
+      "end_index": 1495,
+      "metadata": {
+        "chunk_index": 18,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_19",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "⽗类未初始化则先初始化⽗类。\n4. JVM 启动时指定的主类（含  main ⽅法的类）。\n5. MethodHandle 或  VarHandle ⾸次调⽤时。\n6.",
+      "start_index": 1495,
+      "end_index": 1579,
+      "metadata": {
+        "chunk_index": 19,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_20",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 接⼝定义了  default ⽅法，其实现类初始化时需先初始化该接⼝。\n不会触发初始化的情况（被动引⽤）：\n通过⼦类引⽤⽗类的静态字段（只初始化⽗类）。",
+      "start_index": 1579,
+      "end_index": 1656,
+      "metadata": {
+        "chunk_index": 20,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_21",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n通过数组定义引⽤类（如  MyClass[] arr = new MyClass[10]）。\n引⽤类的  final 常量（常量在编译期已存⼊调⽤类的常量池，与类本⾝⽆关）。",
+      "start_index": 1656,
+      "end_index": 1744,
+      "metadata": {
+        "chunk_index": 21,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_22",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "⼆、类加载机制  \n1. 三种内置类加载器  \n2. 双亲委派模型（ Parents Delegation Model ）  \n⼯作流程：\n当类加载器收到类加载请求时，不会⾃⼰⽴即加载，",
+      "start_index": 1747,
+      "end_index": 1840,
+      "metadata": {
+        "chunk_index": 22,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_23",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "⽽是先委派给⽗加载器。\n每⼀层都如此，直到顶层的  Bootstrap 类加载器。\n只有⽗加载器反馈⽆法加载（找不到类）时，⼦加载器才尝试⾃⼰加载。\n代码体现（ClassLoader.",
+      "start_index": 1840,
+      "end_index": 1932,
+      "metadata": {
+        "chunk_index": 23,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_24",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "loadClass ⽅法逻辑）：",
+      "start_index": 1932,
+      "end_index": 1948,
+      "metadata": {
+        "chunk_index": 24,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_25",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "为什么要双亲委派？\n避免类重复加载：同⼀个类只被加载⼀次。\n核⼼类库安全：防⽌⽤⼾⾃定义的  java.lang.String 等类替代核⼼类，因为委派给  Bootstrap 加载器\n后，",
+      "start_index": 1951,
+      "end_index": 2046,
+      "metadata": {
+        "chunk_index": 25,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_26",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "会优先加载  rt.jar 中的类，⽤⼾⾃定义的恶意类⽆法被加载。\n3.",
+      "start_index": 2046,
+      "end_index": 2082,
+      "metadata": {
+        "chunk_index": 26,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_27",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 打破双亲委派模型的场景  \nSPI （ Service Provider Interface ）：如  JDBC 的  DriverManager 需要加载应⽤类路径下的驱动实现，",
+      "start_index": 2082,
+      "end_index": 2173,
+      "metadata": {
+        "chunk_index": 27,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_28",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "但  \nDriverManager 由  Bootstrap 加载器加载，⽆法委派到  Application 加载器。\n解决⽅案：使⽤线程上下⽂类加载器（Thread.",
+      "start_index": 2173,
+      "end_index": 2258,
+      "metadata": {
+        "chunk_index": 28,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_29",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "currentThread().getContextClassLoader()），让⽗加载器\n调⽤⼦加载器去加载类 —— 逆向委派。",
+      "start_index": 2258,
+      "end_index": 2324,
+      "metadata": {
+        "chunk_index": 29,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_30",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n热部署： OSGi 、 Tomcat 的  WebappClassLoader 等，为了实现模块间类隔离和动态部署，会先⾃⼰加载，再委\n派给⽗加载器。",
+      "start_index": 2324,
+      "end_index": 2400,
+      "metadata": {
+        "chunk_index": 30,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_31",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n⾃定义类加载器：重写  loadClass ⽅法，选择性打破默认委派逻辑。\n4. ⾃定义加载器  \n1. 继承  java.lang.ClassLoader。\n2.",
+      "start_index": 2400,
+      "end_index": 2483,
+      "metadata": {
+        "chunk_index": 31,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_32",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 重写  findClass(String name) ⽅法（推荐，遵循双亲委派）。\n读取  .class ⽂件的字节数组。\n调⽤  defineClass(String name,",
+      "start_index": 2483,
+      "end_index": 2574,
+      "metadata": {
+        "chunk_index": 32,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_33",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " byte[] b, int off, int len) ⽣成  Class 对象。\nprotected Class<?> loadClass(String name,",
+      "start_index": 2574,
+      "end_index": 2658,
+      "metadata": {
+        "chunk_index": 33,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_34",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " boolean resolve) throws \nClassNotFoundException {\n    synchronized (getClassLoadingLock(name)) {\n        // 1.",
+      "start_index": 2658,
+      "end_index": 2769,
+      "metadata": {
+        "chunk_index": 34,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_35",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 检查已加载的类\n        Class<?> c = findLoadedClass(name);\n        if (c == null) {\n            try {\n                if (parent != null) {\n                    c = parent.",
+      "start_index": 2769,
+      "end_index": 2934,
+      "metadata": {
+        "chunk_index": 35,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_36",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "loadClass(name,",
+      "start_index": 2934,
+      "end_index": 2949,
+      "metadata": {
+        "chunk_index": 36,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_37",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " false); // 委派给父加载器\n                } else {\n                    c = findBootstrapClassOrNull(name); // 父为  null 则找  Bootstrap\n                }\n            } catch (ClassNotFoundException e) {\n                // 父加载器找不到，",
+      "start_index": 2949,
+      "end_index": 3170,
+      "metadata": {
+        "chunk_index": 37,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_38",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "则自己尝试加载\n            }\n            if (c == null) {\n                c = findClass(name); // 自己加载\n            }\n        }\n        if (resolve) resolveClass(c);\n        return c;\n    }\n}\n3.",
+      "start_index": 3170,
+      "end_index": 3356,
+      "metadata": {
+        "chunk_index": 38,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_39",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 如果需要完全打破双亲委派，重写  loadClass ⽅法。",
+      "start_index": 3356,
+      "end_index": 3387,
+      "metadata": {
+        "chunk_index": 39,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_40",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "三、 Java 程序执⾏流程  \n⼀个  Java 程序从源代码到最终在计算机上运⾏，需要经过编译、类加载、字节码校验、解释执⾏或即时编译（ JIT ） \n等阶段。下图概括了整个流程：",
+      "start_index": 3390,
+      "end_index": 3482,
+      "metadata": {
+        "chunk_index": 40,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_41",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "四、线程池执⾏流程  \npublic class MyClassLoader extends ClassLoader {\n    private String classPath;\n    public MyClassLoader(String classPath) {\n        this.",
+      "start_index": 3485,
+      "end_index": 3634,
+      "metadata": {
+        "chunk_index": 41,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_42",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "classPath = classPath;\n    }\n    @Override\n    protected Class<?> findClass(String name) throws ClassNotFoundException {\n        byte[] data = loadClassData(name);\n        return defineClass(name,",
+      "start_index": 3634,
+      "end_index": 3830,
+      "metadata": {
+        "chunk_index": 42,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_43",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " data, 0, data.",
+      "start_index": 3830,
+      "end_index": 3845,
+      "metadata": {
+        "chunk_index": 43,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_44",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "length);\n    }\n    private byte[] loadClassData(String name) {\n        // 根据类名从自定义路径读取  .",
+      "start_index": 3845,
+      "end_index": 3934,
+      "metadata": {
+        "chunk_index": 44,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_45",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "class 文件字节流\n        // 省略实现细节\n    }\n}\n.java 源文件  → javac 编译  → .",
+      "start_index": 3934,
+      "end_index": 3998,
+      "metadata": {
+        "chunk_index": 45,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_46",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "class 字节码文件  → 类加载器  → 字节码校验  → 解释器  / JIT 编译器  → 操作系\n统  / 硬件\n提交任务\n    │\n    ▼\n当前线程数  < corePoolSize ？  ──Yes──→ 创建新线程执行任务\n    │\n    No\n    │\n    ▼\n判断任务队列是否已满？\n    │\n    No ──→ 任务入队等待\n    │\n    Yes\n    │\n    ▼\n五、 SpringMVC 执⾏流程  \n1.",
+      "start_index": 3998,
+      "end_index": 4230,
+      "metadata": {
+        "chunk_index": 46,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_47",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 客⼾端发送请求 →  DispatcherServlet（前端控制器）接收。\n2.",
+      "start_index": 4230,
+      "end_index": 4272,
+      "metadata": {
+        "chunk_index": 47,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_48",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " DispatcherServlet 调⽤  HandlerMapping →  根据请求  URL 找到对应的  HandlerExecutionChain（包含\n处理器  Controller 和拦截器列表）。",
+      "start_index": 4272,
+      "end_index": 4379,
+      "metadata": {
+        "chunk_index": 48,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_49",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n3. DispatcherServlet 调⽤  HandlerAdapter →  适配并执⾏处理器（Controller）。\n4.",
+      "start_index": 4379,
+      "end_index": 4447,
+      "metadata": {
+        "chunk_index": 49,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_50",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " Controller 执⾏业务逻辑 →  返回  ModelAndView 对象（或直接返回数据，如  @ResponseBody）。\n5.",
+      "start_index": 4447,
+      "end_index": 4518,
+      "metadata": {
+        "chunk_index": 50,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_51",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " DispatcherServlet 调⽤  ViewResolver →  解析  ModelAndView 中的逻辑视图名，得到实际  View 对象。\n6.",
+      "start_index": 4518,
+      "end_index": 4599,
+      "metadata": {
+        "chunk_index": 51,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_52",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " View 渲染 →  结合  Model 数据⽣成响应内容（如  HTML 、 JSON ）。\n7. 返回响应 →  将渲染结果发送给客⼾端。",
+      "start_index": 4599,
+      "end_index": 4671,
+      "metadata": {
+        "chunk_index": 52,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_53",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n若使⽤  @RestController 或  @ResponseBody，步骤  5-6 会跳过视图解析，",
+      "start_index": 4671,
+      "end_index": 4726,
+      "metadata": {
+        "chunk_index": 53,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_54",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "直接通过  \nHttpMessageConverter 将返回对象序列化为  JSON/XML 等格式写⼊响应体。",
+      "start_index": 4726,
+      "end_index": 4783,
+      "metadata": {
+        "chunk_index": 54,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_55",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n当前线程数  < maximumPoolSize ？  ──Yes──→ 创建新线程执行任务\n    │\n    No\n    │\n    ▼\n触发拒绝策略（ RejectedExecutionHandler ）\n客户端\n  │\n  │ HTTP 请求\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                    DispatcherServlet （前端控制器）             │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 1.",
+      "start_index": 4783,
+      "end_index": 5114,
+      "metadata": {
+        "chunk_index": 55,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_56",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 调用  HandlerMapping 获取处理器执行链\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                       HandlerMapping                         │\n│         根据请求  URL 找到对应的  HandlerExecutionChain        │\n│         （包含  Handler 和  拦截器列表）                         │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 2.",
+      "start_index": 5114,
+      "end_index": 5467,
+      "metadata": {
+        "chunk_index": 56,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_57",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 返回  HandlerExecutionChain\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                    DispatcherServlet                         │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 3.",
+      "start_index": 5467,
+      "end_index": 5701,
+      "metadata": {
+        "chunk_index": 57,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_58",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 调用  HandlerAdapter 执行处理器\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                       HandlerAdapter                         │\n六、 Spring bean 的⽣命周期  \n2~7 都是初始化过程\n│         适配并调用具体的  Controller 方法                       │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 4.",
+      "start_index": 5701,
+      "end_index": 6027,
+      "metadata": {
+        "chunk_index": 58,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_59",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 执行  Controller 业务逻辑\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                     Controller （处理器）                       │\n│     - 处理请求，",
+      "start_index": 6027,
+      "end_index": 6192,
+      "metadata": {
+        "chunk_index": 59,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_60",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "调用  Service 层                                │\n│     - 返回  ModelAndView 或  直接返回数据（ @ResponseBody ）       │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 5.",
+      "start_index": 6192,
+      "end_index": 6373,
+      "metadata": {
+        "chunk_index": 60,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_61",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 返回  ModelAndView （若未使用  @ResponseBody ）\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                    DispatcherServlet                         │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 6.",
+      "start_index": 6373,
+      "end_index": 6621,
+      "metadata": {
+        "chunk_index": 61,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_62",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 调用  ViewResolver 解析视图名\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                       ViewResolver                           │\n│           将逻辑视图名（如  \"userList\" ）解析为  View 对象        │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 7.",
+      "start_index": 6621,
+      "end_index": 6908,
+      "metadata": {
+        "chunk_index": 62,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_63",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 返回  View 对象\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                    DispatcherServlet                         │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 8.",
+      "start_index": 6908,
+      "end_index": 7128,
+      "metadata": {
+        "chunk_index": 63,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_64",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 调用  View 渲染模型数据\n  ▼\n┌─────────────────────────────────────────────────────────────┐\n│                          View                                │\n│         结合  Model 数据生成最终响应内容（ HTML 、 JSON 等）       │\n└─────────────────────────────────────────────────────────────┘\n  │\n  │ 9.",
+      "start_index": 7128,
+      "end_index": 7407,
+      "metadata": {
+        "chunk_index": 64,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_65",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 返回响应\n  ▼\n客户端\n1. 实例化（ Instantiation ）\n       ↓\n2. 属性赋值（ Populate Properties ）\n       ↓\n3.",
+      "start_index": 7407,
+      "end_index": 7496,
+      "metadata": {
+        "chunk_index": 65,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_66",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 设置  Bean 名称（ BeanNameAware ）\n七、 SpringBoot 启动流程  \nSpring Boot 的启动核⼼⼊⼝是  SpringApplication.run()，",
+      "start_index": 7496,
+      "end_index": 7593,
+      "metadata": {
+        "chunk_index": 66,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_67",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "主要流程如下：\n1. 创建  SpringApplication 实例\n推断  Web 应⽤类型（ Servlet 、 Reactive 、 None ）\n加载  META-INF/spring.",
+      "start_index": 7593,
+      "end_index": 7691,
+      "metadata": {
+        "chunk_index": 67,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_68",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "factories 中的初始化器和监听器\n推断主类（含  main ⽅法的类）\n2.",
+      "start_index": 7691,
+      "end_index": 7733,
+      "metadata": {
+        "chunk_index": 68,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_69",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 运⾏  run ⽅法\n启动计时器和事件监听器\n准备环境（Environment）：加载配置⽂件（application.",
+      "start_index": 7733,
+      "end_index": 7794,
+      "metadata": {
+        "chunk_index": 69,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_70",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "properties/yml）、系统环境变量、命令⾏参\n数等\n打印  Banner （可⾃定义或关闭）\n3.",
+      "start_index": 7794,
+      "end_index": 7848,
+      "metadata": {
+        "chunk_index": 70,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_71",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 创建  ApplicationContext 上下⽂\n根据  Web 类型创建对应的  AnnotationConfigApplicationContext 或  \nAnnotationConfigServletWebServerApplicationContext\n4.",
+      "start_index": 7848,
+      "end_index": 7985,
+      "metadata": {
+        "chunk_index": 71,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_72",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 上下⽂准备阶段\n将  Environment 注⼊上下⽂\n执⾏  ApplicationContextInitializer 的  initialize ⽅法\n打印启动⽇志（ Profiles 、启动类等）\n5.",
+      "start_index": 7985,
+      "end_index": 8092,
+      "metadata": {
+        "chunk_index": 72,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_73",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 刷新上下⽂（关键）\n调⽤  refresh() ⽅法（同  Spring 注解驱动的刷新流程）\n       ↓\n4.",
+      "start_index": 8092,
+      "end_index": 8152,
+      "metadata": {
+        "chunk_index": 73,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_74",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 设置  Bean 工厂（ BeanFactoryAware ）\n       ↓\n5. 设置应用上下文（ ApplicationContextAware ）  [ 可选 ]\n       ↓\n6.",
+      "start_index": 8152,
+      "end_index": 8251,
+      "metadata": {
+        "chunk_index": 74,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_75",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " BeanPostProcessor.postProcessBeforeInitialization\n       ↓\n7.",
+      "start_index": 8251,
+      "end_index": 8313,
+      "metadata": {
+        "chunk_index": 75,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_76",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 执行自定义初始化方法：\n   - @PostConstruct 标注的方法\n   - InitializingBean.",
+      "start_index": 8313,
+      "end_index": 8374,
+      "metadata": {
+        "chunk_index": 76,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_77",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "afterPropertiesSet()\n   - 配置的  init-method\n       ↓\n8. 后置处理器（ BeanPostProcessor.",
+      "start_index": 8374,
+      "end_index": 8454,
+      "metadata": {
+        "chunk_index": 77,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_78",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "postProcessAfterInitialization ）\n       ↓\n   【 Bean 就绪，可供使用】\n       ↓\n9.",
+      "start_index": 8454,
+      "end_index": 8526,
+      "metadata": {
+        "chunk_index": 78,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_79",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 销毁（容器关闭时）：\n   - @PreDestroy 标注的方法\n   - DisposableBean.",
+      "start_index": 8526,
+      "end_index": 8581,
+      "metadata": {
+        "chunk_index": 79,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_80",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "destroy()\n   - 配置的  destroy-method\n解析配置类、注册  Bean 、⾃动配置（@EnableAutoConfiguration）\n启动内嵌  Web 容器（如  Tomcat 、 Jetty 、 Undertow ）\n发布  ServletWebServerInitializedEvent 等事件\n6.",
+      "start_index": 8581,
+      "end_index": 8750,
+      "metadata": {
+        "chunk_index": 80,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_81",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 执⾏扩展点\n执⾏  CommandLineRunner 和  ApplicationRunner（按  @Order 排序）\n发布  ApplicationReadyEvent，",
+      "start_index": 8750,
+      "end_index": 8840,
+      "metadata": {
+        "chunk_index": 81,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_82",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "标记应⽤启动完成\n7. 等待与关闭\n如果⾮  Web 应⽤，启动后⽴即退出（除⾮有  SpringApplication 设置）； Web 应⽤则阻塞等待关闭\n注册  JVM 钩⼦，",
+      "start_index": 8840,
+      "end_index": 8931,
+      "metadata": {
+        "chunk_index": 82,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_83",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "容器关闭时优雅释放资源\n简化版：SpringApplication.",
+      "start_index": 8931,
+      "end_index": 8965,
+      "metadata": {
+        "chunk_index": 83,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_84",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "run() →  加载配置  →  创建并刷新  Spring 上下⽂  →  启动内嵌  Web 容器  →  执\n⾏  Runner →  应⽤就绪。",
+      "start_index": 8965,
+      "end_index": 9042,
+      "metadata": {
+        "chunk_index": 84,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_85",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "⼋、 HTTP 通信流程  \nHTTP （ HyperText Transfer Protocol ）是⼀种⽆状态、基于请求 - 响应模式的应⽤层协议，通常运⾏在  TCP/IP 协议栈\n之上。",
+      "start_index": 9045,
+      "end_index": 9142,
+      "metadata": {
+        "chunk_index": 85,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_86",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "⼀次完整的  HTTP 通信包含以下关键步骤：",
+      "start_index": 9142,
+      "end_index": 9165,
+      "metadata": {
+        "chunk_index": 86,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_87",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "1. 域名解析（ DNS ）  \n⽤⼾在浏览器输⼊  URL （如  https://www.example.com/index.html）后，",
+      "start_index": 9168,
+      "end_index": 9240,
+      "metadata": {
+        "chunk_index": 87,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_88",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "浏览器会向  DNS 服务器查询域名对应\n的  IP 地址。若本地缓存中没有，则递归 / 迭代查询直⾄获得  IP 。",
+      "start_index": 9240,
+      "end_index": 9299,
+      "metadata": {
+        "chunk_index": 88,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_89",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n[ 客户端 ]                    [ 网络 ]                    [ 服务器 ]\n    │                         │                         │\n    │  1.",
+      "start_index": 9299,
+      "end_index": 9428,
+      "metadata": {
+        "chunk_index": 89,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_90",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " DNS 解析域名           │                         │\n    ├────────────────────────►│                         │\n    │  2.",
+      "start_index": 9428,
+      "end_index": 9543,
+      "metadata": {
+        "chunk_index": 90,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_91",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " TCP 三次握手建立连接   │                         │\n    ├────────────────────────►├────────────────────────►│\n    │  3.",
+      "start_index": 9543,
+      "end_index": 9654,
+      "metadata": {
+        "chunk_index": 91,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_92",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 发送 HTTP 请求报文      │                         │\n    ├────────────────────────►├────────────────────────►│\n    │                         │  4.",
+      "start_index": 9654,
+      "end_index": 9794,
+      "metadata": {
+        "chunk_index": 92,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_93",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 服务器处理请求        │\n    │                         │  ( 路由、业务逻辑等 )      │\n    │  5.",
+      "start_index": 9794,
+      "end_index": 9874,
+      "metadata": {
+        "chunk_index": 93,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_94",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 返回 HTTP 响应报文      │                         │\n    │◄────────────────────────┤◄────────────────────────┤\n    │  6.",
+      "start_index": 9874,
+      "end_index": 9988,
+      "metadata": {
+        "chunk_index": 94,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_95",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 浏览器解析渲染        │                         │\n    │  7.",
+      "start_index": 9988,
+      "end_index": 10041,
+      "metadata": {
+        "chunk_index": 95,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_96",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " TCP 四次挥手 ( 可选 )    │                         │\n    │◄────────────────────────┤◄────────────────────────┤\n2.",
+      "start_index": 10041,
+      "end_index": 10149,
+      "metadata": {
+        "chunk_index": 96,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_97",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 建⽴  TCP 连接（三次握⼿）  \nHTTP 协议基于  TCP ，因此在发送  HTTP 请求前，客⼾端需要与服务器通过三次握⼿建⽴可靠连接（默认端⼝  80 for \nHTTP ，",
+      "start_index": 10149,
+      "end_index": 10243,
+      "metadata": {
+        "chunk_index": 97,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_98",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 443 for HTTPS ）。 HTTPS 还需额外进⾏  TLS/SSL 握⼿（证书验证、密钥交换）。\n3.",
+      "start_index": 10243,
+      "end_index": 10300,
+      "metadata": {
+        "chunk_index": 98,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_99",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 客⼾端发送  HTTP 请求报⽂  \n请求报⽂由四部分组成：\n请求⾏：⽅法（ GET/POST/PUT/DELETE 等）、 URL 、协议版本（ HTTP/1.1 或  HTTP/2 等）。",
+      "start_index": 10300,
+      "end_index": 10397,
+      "metadata": {
+        "chunk_index": 99,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_100",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n请求头（ Header ）：键值对，如  Host、User-Agent、Accept、Cookie、Connection 等。\n空⾏：分隔头部和正⽂。\n请求体（ Body ）：可选，",
+      "start_index": 10397,
+      "end_index": 10490,
+      "metadata": {
+        "chunk_index": 100,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_101",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "如  POST 表单数据、 JSON 、⽂件等。\n4. 服务器处理请求并返回响应报⽂  \n服务器接收报⽂后，解析请求⾏和头部，定位资源（静态⽂件或动态脚本），执⾏相应逻辑（如数据库查询），",
+      "start_index": 10490,
+      "end_index": 10584,
+      "metadata": {
+        "chunk_index": 101,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_102",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "然后⽣\n成响应报⽂。\n响应报⽂包含：\n状态⾏：协议版本、状态码（ 200 OK 、 404 Not Found 、 500 等）、状态描述。",
+      "start_index": 10584,
+      "end_index": 10654,
+      "metadata": {
+        "chunk_index": 102,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_103",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\n响应头：Content-Type、Content-Length、Set-Cookie、Cache-Control 等。\n空⾏。\n响应体： HTML 、 JSON 、图⽚⼆进制数据等。\n5.",
+      "start_index": 10654,
+      "end_index": 10749,
+      "metadata": {
+        "chunk_index": 103,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_104",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 浏览器解析与渲染  \n浏览器收到响应后，根据  Content-Type 决定如何处理。对于  HTML ，会解析  DOM 树、 CSS 树，执⾏  JavaScript ，\n布局并绘制⻚⾯。",
+      "start_index": 10749,
+      "end_index": 10847,
+      "metadata": {
+        "chunk_index": 104,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_105",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "如果⻚⾯中包含其他资源（ CSS 、 JS 、图⽚），会再次发起新的  HTTP 请求（通常并⾏、有限数量）。\n6. 连接管理  \nHTTP/1.0：默认短连接，每次请求后关闭  TCP 连接。",
+      "start_index": 10847,
+      "end_index": 10944,
+      "metadata": {
+        "chunk_index": 105,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_106",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "\nHTTP/1.1：默认持久连接（Connection: keep-alive），⼀个  TCP 连接可复⽤发送多个请求，减少握⼿开\n销。\nHTTP/2：多路复⽤，",
+      "start_index": 10944,
+      "end_index": 11026,
+      "metadata": {
+        "chunk_index": 106,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_107",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "在⼀个连接上并⾏交错发送多个请求 / 响应，进⼀步降低延迟。\n关闭连接：当⼀⽅发送  Connection: close 或空闲超时后，通过  TCP 四次挥⼿断开连接。\n7.",
+      "start_index": 11026,
+      "end_index": 11114,
+      "metadata": {
+        "chunk_index": 107,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_108",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": " 关键特点  \n⽆状态：服务器不保留请求之间的⽤⼾信息，需借助  Cookie 、 Session 、 Token 等机制维持会话。\n明⽂传输（ HTTP ）：数据未加密，",
+      "start_index": 11114,
+      "end_index": 11200,
+      "metadata": {
+        "chunk_index": 108,
+        "total_chunks": 110
+      }
+    },
+    {
+      "chunk_id": "b815aa9e_20260605_chunk_109",
+      "file_id": "b815aa9e_20260605",
+      "file_name": "流程类八股.pdf",
+      "content": "易被窃听； HTTPS 通过  TLS 加密保证机密性与完整性。\n灵活性：可传输任意类型数据（⽂本、图像、视频等），通过  Content-Type 标识。",
+      "start_index": 11200,
+      "end_index": 11278,
+      "metadata": {
+        "chunk_index": 109,
+        "total_chunks": 110
+      }
+    }
+  ],
+  "timestamp": "2026-06-06T17:38:24.361116",
+  "total_chunks": 110,
+  "vector_dim": 768
+}

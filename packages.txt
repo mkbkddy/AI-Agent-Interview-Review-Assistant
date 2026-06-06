@@ -1,0 +1,38 @@
+# 音频处理依赖
+ffmpeg
+libavcodec-extra
+libavformat-dev
+libavdevice-dev
+libavfilter-dev
+libswscale-dev
+libswresample-dev
+libavutil-dev
+
+# 图像处理依赖
+libjpeg-dev
+libpng-dev
+libtiff-dev
+zlib1g-dev
+libglib2.0-0
+libsm6
+libxext6
+libxrender-dev
+libgl1-mesa-glx
+libglib2.0-bin
+
+# PDF 处理依赖
+poppler-utils
+libpoppler-cpp-dev
+
+# 文本处理依赖
+libicu-dev
+
+# 系统工具
+pkg-config
+build-essential
+cmake
+git
+wget
+curl
+unzip
+zip

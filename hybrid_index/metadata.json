@@ -1,0 +1,32 @@
+{
+  "c29bc2d1": {
+    "doc_id": "c29bc2d1",
+    "created_at": "2026-06-05T16:50:00.443092",
+    "content_length": 28,
+    "source": "Python 基础教程"
+  },
+  "e50adbd0": {
+    "doc_id": "e50adbd0",
+    "created_at": "2026-06-05T16:50:00.443128",
+    "content_length": 24,
+    "source": "机器学习入门"
+  },
+  "ec64fc07": {
+    "doc_id": "ec64fc07",
+    "created_at": "2026-06-05T16:50:00.443137",
+    "content_length": 23,
+    "source": "深度学习实战"
+  },
+  "93525033": {
+    "doc_id": "93525033",
+    "created_at": "2026-06-05T16:50:00.443143",
+    "content_length": 27,
+    "source": "面试技巧"
+  },
+  "c7bfd4d8": {
+    "doc_id": "c7bfd4d8",
+    "created_at": "2026-06-05T16:50:00.443150",
+    "content_length": 19,
+    "source": "简历编写指南"
+  }
+}
